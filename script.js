@@ -90,13 +90,11 @@ btnScrollTo.addEventListener('click', function (e) {
 
 // 1. Add event listener to common parent element
 // 2. Determine what element originated the event
-
+// smooth scrolling
 document.querySelector('.nav__links').addEventListener('click', function (e) {
-  e.preventDefault();
-  // Matching strategy
+  e.preventDefault;
   if (e.target.classList.contains('.nav__link')) {
-    const id = e.target.getAttribute('href');
-    console.log(id);
+    const id = this.getAttribute('href');
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
